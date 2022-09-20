@@ -16,7 +16,9 @@ function App() {
   }
 
   const limpiar = (event) =>{
-    setCliente({name:"",surname:"",chum:""})
+    setName('');
+    setSurname('');
+    setChum('');
   }
 
 

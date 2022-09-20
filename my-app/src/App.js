@@ -3,13 +3,13 @@ import './App.css';
 
 
 function App() {
-  const botonActivo = (name !== undefined && name !=="") && (surname !== undefined && surname !=="") && (chum !== undefined && chum !=="");
   const [formularioEnv, setFormEnv] = useState(false);
 
   const[name ,setName]=useState();
   const[surname ,setSurname]=useState();
   const[chum ,setChum]=useState();
- 
+  const botonActivo = (name !== undefined && name !=="") && (surname !== undefined && surname !=="") && (chum !== undefined && chum !=="");
+
   const enviar = (event) => {
     event.preventDefault();
     setFormEnv(true);

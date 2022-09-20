@@ -20,6 +20,16 @@ function App() {
     setSurname('');
     setChum('');
   }
+  const manejarName=(event)=>{
+    setName(event.target.value)
+  }
+  const manejarSurname=(event)=>{
+    setSurname(event.target.value)
+  }
+  const manejarChum=(event)=>{
+    setChum(event.target.value)
+  }
+  
 
 
   return (

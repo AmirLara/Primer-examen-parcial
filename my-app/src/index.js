@@ -1,56 +1,17 @@
-import React , { Component } from ' react ' ;
-import { render } from ' react - dom ' ;
-import ' ./style.css ' ;
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
-class Formulario extends Component {
-  constructor ( props ) {
-    super ( props ) ;
-    this.state = {
-      email : "" ,
-      password :""
-    }
-    syncChanges (value,property){
-      let state = {} ;
-      state [property] = value ;
-      this.setState ( state ) ;
-    }
-    
-    submitForm = ( ) =>{
-      console.log ( this.state ) ;
-    }
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 
-
-  
- render ( ) {
-  return (
-    <form>
-      <input
-      onChange = {(ev)=>{this.syncChanges(ev.target.value , 'email')}}
-        type="email"
-        value={ this.state.email }
-        placeholder = "Email" />
-      <input
-        onChange={(ev)=>{this.syncChanges (ev.target.value ,'password')}}
-        type = "password"
-        value = {this.state.password}
-        placeholder="*******"/>
-      <div>
-        <input
-        onClick = {this.submitForm}
-        type = "submit"
-        value = "Iniciar sesión"/>
-      </div>
-    </form>
-  )
- }
-}
- 
-
-class App extends Component{
-  constructor(){
-    super();
-    this.state={
-      name:'React'
-    }
-  }
- }
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
